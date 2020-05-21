@@ -81,8 +81,8 @@ void *multiply(void *threadid)
 
     for (int k = start; k < end; k++)
     {
-        row = k / cellsToCompute;
-        col = k % cellsToCompute;
+        row = k / Q;
+        col = k % Q;
         // One cell calculation
         for (int i = 0; i < M; ++i)
             C[row][col] += A[row][i] * B[i][col];
